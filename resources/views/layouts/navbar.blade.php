@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+{{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
@@ -47,4 +47,98 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav> --}}
+
+
+
+
+
+{{-- <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- fontawesom -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<title>Photography</title>
+</head>
+<body>
+	<div id="app" class="w-100 h-100">
+        @include('layouts.navbar')
+            @yield('content')
+    </div>
+
+</body>
+</html> --}}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>Admin Pannel</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href={{asset('plugins/fontawesome-free/css/all.min.css')}}>
+  <!-- Theme style -->
+  <link rel="stylesheet" href={{asset('dist/css/adminlte.min.css')}}>
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand navbar-white navbar-light">
+    <!-- right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="{{ url('/') }}" class="nav-link">Home</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+
+
+
+
+
+	<div id="app" class="w-100 h-100">
+        {{-- @include('layouts.navbar') --}}
+            @yield('content')
+    </div>
+
+
+  <!-- Main Footer -->
+  <footer class=" text-center mt-5 pt-5">
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2021 <a href="">Mahedi Hasan</a>.</strong> All rights reserved.
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src= {{asset("plugins/jquery/jquery.min.js")}}></script>
+<!-- Bootstrap 4 -->
+<script src={{asset("plugins/bootstrap/js/bootstrap.bundle.min.js")}}></script>
+<!-- AdminLTE App -->
+<script src={{asset("dist/js/adminlte.min.js")}}></script>
+</body>
+</html>
+
+
+
+
+
+
