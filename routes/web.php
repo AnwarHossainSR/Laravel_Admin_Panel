@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\RoleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,7 @@ Route::get('/home', function () {
 
 //Users
 Route::get('/profile', [UserController::class,'profileData'])->middleware('auth');
-Route::post('/profile', [UserController::class,'updateProfile']);
+Route::post('/profile', [UserController::class,'updateProfile'])->middleware('auth');;
 Route::get('/password/change',[UserController::class,'getPassword'])->middleware('auth');
 Route::post('/password/change',[UserController::class,'postPassword'])->middleware('auth');
 
@@ -38,3 +39,6 @@ Route::get('/permission/create',[PermissionController::class,'create'])->middlew
 Route::post('/permission/store',[PermissionController::class,'store'])->middleware('auth');
 Route::get('/permission/edit/{id}',[PermissionController::class,'store'])->middleware('auth');
 Route::get('/permission/delete/{id}',[PermissionController::class,'store'])->middleware('auth');
+
+//Role
+Route::get('/roles',[RoleController::class,'index'])->middleware('auth');
