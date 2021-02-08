@@ -8,7 +8,7 @@ Roles
     <div class="card-header">
         <h3 class="card-title">Roles Table</h3>
         <div class="card-tools">
-            <a href=" " class="btn btn-primary"><i class="fas fa-shield-alt"></i> Add new Role</a>
+            <a href="{{ url('/roles/create') }}" class="btn btn-primary"><i class="fas fa-shield-alt"></i> Add new Role</a>
         </div>
     </div>
     <div class="card-body table-responsive p-0">

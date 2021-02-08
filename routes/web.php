@@ -42,3 +42,4 @@ Route::get('/permission/delete/{id}',[PermissionController::class,'store'])->mid
 
 //Role
 Route::get('/roles',[RoleController::class,'index'])->middleware('auth');
+Route::get('/roles/create',[RoleController::class,'create'])->middleware('auth');

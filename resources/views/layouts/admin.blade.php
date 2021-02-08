@@ -43,7 +43,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini">
-<div class="wrapper">
+<div class="wrapper" id="apps">
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -319,7 +319,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2021 <a href={{"/profile"}}>Mahedi Hasan</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2021 <a href={{"profile/"}}>Mahedi Hasan</a>.</strong> All rights reserved.
   </footer>
 </div>
 <!-- ./wrapper -->
