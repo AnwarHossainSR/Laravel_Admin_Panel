@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PermissionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +26,15 @@ Route::get('/home', function () {
     return view('profile');
 })->middleware('auth'); */
 
-Route::get('/profile', [UserController::class,'profileData']);
+//Users
+Route::get('/profile', [UserController::class,'profileData'])->middleware('auth');
 Route::post('/profile', [UserController::class,'updateProfile']);
+Route::get('/password/change',[UserController::class,'getPassword'])->middleware('auth');
+Route::post('/password/change',[UserController::class,'postPassword'])->middleware('auth');
+
+//Permissions
+Route::get('/permissions',[PermissionController::class,'index'])->middleware('auth');
+Route::get('/permission/create',[PermissionController::class,'create'])->middleware('auth');
+Route::post('/permission/store',[PermissionController::class,'store'])->middleware('auth');
+Route::get('/permission/edit/{id}',[PermissionController::class,'store'])->middleware('auth');
+Route::get('/permission/delete/{id}',[PermissionController::class,'store'])->middleware('auth');
